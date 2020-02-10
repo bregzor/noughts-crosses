@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: lightgray;
+  font-family: 'Raleway', sans-serif;
+  background-image: url("../media/bg_dices_1.png");
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: white;
+}
+
+header h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #6e6e6e;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  font-weight: normal;
+  padding-left: 30px;
+}
+
+.welcomeSection {
+  background-color: #b5808338;
+  height: 400px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 100px;
+  color: white;
+}
+
+.welcomeSection h1,
+.welcomeSection p {
+  margin: 15px;
+}
+
+.welcomeSection button {
+  margin: 30px;
+}
+
+.welcomeSection select {
+  height: 60px;
+  width: 45px;
+  background: #242424;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  border: 0px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gameSection {
+  background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c2f5aa 0%, #c7aeae 100%);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.gameSection .totalTurn,
+.gameSection .player {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  color: #d6d6d6;
+  position: absolute;
+  left: 300px;
+  top: 160px;
+  font-size: 38px;
+  font-weight: bold;
+  width: 350px;
+}
+
+.gameSection .totalTurn {
+  font-size: 26px;
+  font-weight: normal;
+  top: 220px;
+}
+
+.gameSection .gameArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 94%;
+}
+
+.gameSection .gameArea .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+}
+
+.gameSection .gameArea .row button {
+  width: 40px;
+  height: 40px;
+  background: #383d31;
+  border: 1px solid #757575;
+  outline: none;
+  cursor: pointer;
+}
+
+.gameSection .gameArea .row button:hover {
+  background: #7c5959;
+}
+
+.gameSection .winnerMessage {
+  font-family: 'Raleway', sans-serif;
+  font-size: 38px;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 40%;
+}
+
+.gameSection .btn, .gameSection .welcomeSection button, .welcomeSection .gameSection button {
+  top: 450px;
+  right: -46%;
+}
+
+.winnerColorRed {
+  background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c7aeae 0%, #c7aeae 100%);
+}
+
+.winnerColorGreen {
+  background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c2f5aa 0%, #c2f5aa 100%);
+}
+
+.transform {
+  -webkit-filter: drop-shadow(10px -20px 15px #5e5e5e);
+          filter: drop-shadow(10px -20px 15px #5e5e5e);
+  -webkit-transform: rotate3d(5, 2, 1, 250deg);
+          transform: rotate3d(5, 2, 1, 250deg);
+  position: relative;
+  top: -120px;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background: #303030;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
+
+footer p {
+  font-family: inherit;
+  color: white;
+  line-height: 50px;
+}
+
+.d-depth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  width: 40px;
+  height: 2em;
+  right: 40px;
+  top: 120px;
+}
+
+.d-depth .depth {
+  border: 0px;
+  height: 2em;
+  width: 100%;
+}
+
+.d-depth label {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  left: -5px;
+  top: 5px;
+  color: white;
+}
+
+.sound {
+  right: 120px;
+}
+
+.fadeIn {
+  -webkit-animation: in;
+          animation: in;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fas,
+.far {
+  font-size: 28px;
+}
+
+.fas {
+  color: #c4ffc4;
+}
+
+.far {
+  color: #ffc7c7;
+}
+
+.btn, .welcomeSection button {
+  background: #95b46f;
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: white;
+  -webkit-filter: drop-shadow(1px 1px 50px gray);
+          filter: drop-shadow(1px 1px 50px gray);
+  cursor: pointer;
+}
+
+.btn:hover, .welcomeSection button:hover {
+  background: #6c864b;
+}
+/*# sourceMappingURL=style.css.map */

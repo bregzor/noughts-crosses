@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(211, 211, 211);
+    font-family: 'Raleway', sans-serif;
+    background-image: url("../media/bg_dices_1.png");
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: white;
+    h1 {
+        font-family: 'Quicksand', sans-serif;
+        color: #6e6e6e;
+        text-align: center;
+        line-height: 60px;
+        font-size: 25px;
+        font-weight: normal;
+        padding-left: 30px;
+    }
+}
+
+.welcomeSection {
+    background-color: #b5808338;
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 100px;
+    color: white;
+    h1,
+    p {
+        margin: 15px;
+    }
+    button {
+        @extend .btn;
+        margin: 30px;
+    }
+    select {
+        height: 60px;
+        width: 45px;
+        background: #242424;
+        font-family: "Quicksand", sans-serif;
+        font-size: 20px;
+        border: 0px;
+        outline: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.gameSection {
+    background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c2f5aa 0%, #c7aeae 100%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    .totalTurn,
+    .player {
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        color: rgb(214, 214, 214);
+        position: absolute;
+        left: 300px;
+        top: 160px;
+        font-size: 38px;
+        font-weight: bold;
+        //text-shadow: 3px 3px 5px rgb(155, 155, 155);
+        width: 350px;
+    }
+    .totalTurn {
+        font-size: 26px;
+        font-weight: normal;
+        top: 220px;
+    }
+    .gameArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 94%;
+        .row {
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            button {
+                width: 40px;
+                height: 40px;
+                background: #383d31;
+                border: 1px solid rgb(117, 117, 117);
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    background: rgb(124, 89, 89);
+                }
+            }
+        }
+    }
+    .winnerMessage {
+        font-family: 'Raleway', sans-serif;
+        font-size: 38px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        position: relative;
+        top: 40%;
+    }
+    .btn {
+        top: 450px;
+        right: -46%;
+    }
+}
+
+.winnerColorRed {
+    background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c7aeae 0%, #c7aeae 100%);
+}
+
+.winnerColorGreen {
+    background-image: url("../media/bg_dices_1.png"), linear-gradient(135deg, #c2f5aa 0%, #c2f5aa 100%);
+}
+
+.transform {
+    filter: drop-shadow(10px -20px 15px rgb(94, 94, 94));
+    transform: rotate3d(5, 2, 1, 250deg);
+    position: relative;
+    top: -120px;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background: #303030;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    p {
+        font-family: inherit;
+        color: white;
+        line-height: 50px;
+    }
+}
+
+//3D checkbox
+.d-depth {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 40px;
+    height: 2em;
+    right: 40px;
+    top: 120px;
+    .depth {
+        border: 0px;
+        height: 2em;
+        width: 100%;
+    }
+    label {
+        font-family: "Raleway", sans-serif;
+        position: relative;
+        left: -5px;
+        top: 5px;
+        color: white;
+    }
+}
+
+.sound {
+    right: 120px;
+}
+
+.fadeIn {
+    animation: in;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//PLAYERS
+.fas,
+.far {
+    font-size: 28px;
+}
+
+.fas {
+    color: rgb(196, 255, 196);
+}
+
+.far {
+    color: rgb(255, 199, 199);
+}
+
+.btn {
+    background: #95b46f;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: white;
+    filter: drop-shadow(1px 1px 50px gray);
+    cursor: pointer;
+    &:hover {
+        background: #6c864b;
+    }
+}
